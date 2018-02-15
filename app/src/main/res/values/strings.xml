@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">RookieAgent</string>
+    <string name="start">Commencer</string>
+    <string name="exit">Quitter</string>
+    <string name="option">Option</string>
 </resources>
