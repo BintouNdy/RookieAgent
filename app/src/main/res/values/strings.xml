@@ -4,4 +4,7 @@
     <string name="exit">Quitter</string>
     <string name="option">Option</string>
     <string name="logo_desc">Logo de l\'application</string>
+    <string name="exit_message">Voulez vous vraiment quitter ? Votre partie n\'a pas été sauvegardé</string>
+    <string name="ok">ok</string>
+    <string name="cancel">Annulé</string>
 </resources>
