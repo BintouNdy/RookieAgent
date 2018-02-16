@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -14,80 +15,222 @@
         android:contentDescription="@string/icon_sons"
         android:src="@drawable/perso" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_weight="66"
-        android:orientation="vertical">
+        android:layout_weight="66">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_good"
-            android:drawablePadding="5dip"
-            android:drawableStart="@drawable/ic_good"
-            android:text="Surnom" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_good"
-            android:drawablePadding="5dip"
-            android:drawableStart="@drawable/ic_good"
-            android:text="Vie" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_good"
-            android:drawablePadding="5dip"
-            android:drawableStart="@drawable/ic_good"
-            android:text="Niveau" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_good"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_good"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Surnom : " />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_good"
-            android:drawablePadding="5dip"
-            android:drawableStart="@drawable/ic_good"
-            android:text="Maitrise armes" />
+                <TextView
+                    android:id="@+id/textViewSurnom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="super cops"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_good"
-            android:drawablePadding="5dip"
-            android:drawableStart="@drawable/ic_good"
-            android:text="Mairise du stress" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_good"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_good"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Vie : " />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_good"
-            android:drawablePadding="5dip"
-            android:drawableStart="@drawable/ic_good"
-            android:text="Morale" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/textViewVie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="100"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_good"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_good"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Niveau : " />
+
+                <TextView
+                    android:id="@+id/textViewNiveau"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="1"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_good"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_good"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Maitrise d'arme : " />
+
+                <TextView
+                    android:id="@+id/textViewWeapon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_good"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_good"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Maitrise du stress : " />
+
+                <TextView
+                    android:id="@+id/textViewStress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_good"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_good"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Morale : " />
+
+                <TextView
+                    android:id="@+id/textViewMoral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="50"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/ic_good"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_good"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Logique : " />
+
+                <TextView
+                    android:id="@+id/textViewLogic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

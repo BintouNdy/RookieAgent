@@ -1,7 +1,14 @@
 package com.example.bins.rookieagent;
 
 public class Personnage {
-    private int experience, level, gunControl, stressControl, moral, logic, health;
+    private int experience;
+    private int level;
+    private int gunControl;
+    private int stressControl;
+    private int moral;
+    private int logic;
+
+    private int health;
     private String name, surname;
 
     public Personnage(int experience, int level, int gunControl, int stressControl, int health, int moral, int logic, String name, String surname) {
@@ -75,6 +82,14 @@ public class Personnage {
 
     public String getSurname() {
         return surname;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public void setSurname(String surname) {

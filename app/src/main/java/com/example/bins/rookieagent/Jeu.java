@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -21,6 +22,15 @@ public class Jeu extends AppCompatActivity {
     private Button btn_1_2;
     private Button btn_2_1;
     private Button btn_2_2;
+
+    private ImageView imageViewPerso;
+    private TextView textViewSurnom;
+    private TextView textViewVie;
+    private TextView textViewNiveau;
+    private TextView textViewWeapon;
+    private TextView textViewStress;
+    private TextView textViewMoral;
+    private TextView textViewLogic;
 
     Personnage perso = new Personnage(0, 1, 0, 0, 100, 0, 0, "Steven", "Yon");
     String quartier;
@@ -69,6 +79,7 @@ public class Jeu extends AppCompatActivity {
                         perso.addExperience(RandomNumber());
                         perso.addGunControl(RandomNumber());
                         perso.addLogic(RandomNumber());
+                        Toast.makeText(Jeu.this, "Vous venez d'évoluer", Toast.LENGTH_SHORT).show();
                     }
                 });
                 btn_1_2.setOnClickListener(new View.OnClickListener() {
@@ -274,7 +285,26 @@ public class Jeu extends AppCompatActivity {
                         .setIcon(R.drawable.ic_contact).setTitle(perso.getName())
                         .setPositiveButton(R.string.ok, null)
                         .show();
-//                buttonSound = caracter_card.findViewById(R.id.buttonSound);
+
+                // récupération des objet de la pop-up
+                imageViewPerso = caracter_card.findViewById(R.id.imageViewPerso);
+                textViewSurnom = caracter_card.findViewById(R.id.textViewSurnom);
+                textViewVie = caracter_card.findViewById(R.id.textViewVie);
+                textViewNiveau = caracter_card.findViewById(R.id.textViewNiveau);
+                textViewWeapon = caracter_card.findViewById(R.id.textViewWeapon);
+                textViewStress = caracter_card.findViewById(R.id.textViewStress);
+                textViewMoral = caracter_card.findViewById(R.id.textViewMoral);
+                textViewLogic = caracter_card.findViewById(R.id.textViewLogic);
+
+                // Mise a jour des champs avce les données du joueur
+//                imageViewPerso
+                textViewSurnom.setText(perso.getSurname());
+                textViewVie.setText("" + perso.getHealth());
+                textViewNiveau.setText("" + perso.getLevel());
+                textViewWeapon.setText("" + perso.getGunControl());
+                textViewStress.setText("" + perso.getStressControl());
+                textViewMoral.setText("" + perso.getMoral());
+                textViewLogic.setText("" + perso.getLogic());
                 break;
         }
         return true;

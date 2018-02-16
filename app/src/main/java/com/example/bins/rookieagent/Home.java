@@ -11,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
 
@@ -22,7 +21,6 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
 
 
         player = MediaPlayer.create(Home.this, R.raw.music);
@@ -91,8 +89,7 @@ public class Home extends AppCompatActivity {
         if (player.isPlaying()) {
             player.pause();
             buttonSound.setImageResource(R.drawable.ic_muted);
-        }
-        else {
+        } else {
             player.start();
             buttonSound.setImageResource(R.drawable.ic_volume);
         }
