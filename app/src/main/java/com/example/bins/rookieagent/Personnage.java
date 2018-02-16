@@ -45,7 +45,9 @@ public class Personnage {
         return stressControl;
     }
 
-    public void addStressControl(int stressControl) {this.stressControl = this.stressControl + stressControl;}
+    public void addStressControl(int stressControl) {
+        this.stressControl = this.stressControl + stressControl;
+    }
 
     public int getMoral() {
         return moral;

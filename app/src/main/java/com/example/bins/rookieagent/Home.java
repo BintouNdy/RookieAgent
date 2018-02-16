@@ -43,7 +43,7 @@ public class Home extends AppCompatActivity {
             case R.id.menu_about:
                 new AlertDialog.Builder(this)
                         .setMessage(R.string.police_desc)
-                        .setIcon(R.drawable.ic_policeman).setTitle(R.string.police_name)
+                        .setIcon(R.drawable.ic_contact).setTitle(R.string.police_name)
                         .setPositiveButton(R.string.ok, null)
                         .show();
                 break;

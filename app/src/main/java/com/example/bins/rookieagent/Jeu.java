@@ -3,6 +3,7 @@ package com.example.bins.rookieagent;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -249,9 +250,9 @@ public class Jeu extends AppCompatActivity {
         return randomNumber.nextInt(15);
     }
 
-    public int RandomLecheur(){
+    public int RandomLecheur() {
         Random randomNumber = new Random();
-        return randomNumber.nextInt(15 + 1 -15) + 15;
+        return randomNumber.nextInt(15 + 1 - 15) + 15;
     }
 
     @Override
@@ -264,11 +265,16 @@ public class Jeu extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_about:
-                new AlertDialog.Builder(this)
-                        .setMessage(R.string.police_desc)
-                        .setIcon(R.drawable.ic_policeman).setTitle(R.string.police_name)
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+                LayoutInflater inflater = this.getLayoutInflater();
+                View caracter_card = inflater.inflate(R.layout.alert_dialog_perso, null);
+
+                builder.setView(caracter_card)
+                        .setIcon(R.drawable.ic_contact).setTitle(perso.getName())
                         .setPositiveButton(R.string.ok, null)
                         .show();
+//                buttonSound = caracter_card.findViewById(R.id.buttonSound);
                 break;
         }
         return true;
