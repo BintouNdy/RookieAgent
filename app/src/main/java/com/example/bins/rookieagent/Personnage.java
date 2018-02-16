@@ -1,8 +1,8 @@
 package com.example.bins.rookieagent;
 
 public class Personnage {
-    int experience, level, gunControl, stressControl, moral, logic, health;
-    String name, surname;
+    private int experience, level, gunControl, stressControl, moral, logic, health;
+    private String name, surname;
 
     public Personnage(int experience, int level, int gunControl, int stressControl, int health, int moral, int logic, String name, String surname) {
         this.experience = experience;
@@ -22,15 +22,19 @@ public class Personnage {
     }
 
     public void addExperience(int experience) {
-        this.experience = this.experience + experience;
+        if (this.experience < 1500) {
+            this.experience += experience;
+        }
     }
 
     public int getLevel() {
-        return level;
+        return this.level = (experience / 100) + 1;
     }
 
-    public void addLevel(int level) {
-        this.level = this.level + level;
+    public void addLevel() {
+        if (this.level <= 15) {
+            this.level += 1;
+        }
     }
 
     public int getGunControl() {
@@ -38,21 +42,29 @@ public class Personnage {
     }
 
     public void addGunControl(int gunControl) {
-        this.gunControl = this.gunControl + gunControl;
+        if (this.stressControl <= 15) {
+            this.gunControl += gunControl;
+        }
     }
 
     public int getStressControl() {
         return stressControl;
     }
 
-    public void addStressControl(int stressControl) {this.stressControl = this.stressControl + stressControl;}
+    public void addStressControl(int stressControl) {
+        if (this.stressControl <= 15) {
+            this.stressControl += stressControl;
+        }
+    }
 
     public int getMoral() {
         return moral;
     }
 
     public void addMoral(int moral) {
-        this.moral = this.moral + moral;
+        if (this.moral <= 5) {
+            this.moral += moral;
+        }
     }
 
     public int getLogic() {
@@ -60,7 +72,15 @@ public class Personnage {
     }
 
     public void addLogic(int logic) {
-        this.logic = this.logic + logic;
+        if (this.logic <= 5) {
+            this.logic += logic;
+        }
+    }
+
+    public void addHealth(int health) {
+        if (this.health <= 100) {
+            this.health += health;
+        }
     }
 
     public String getName() {

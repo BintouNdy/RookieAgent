@@ -246,13 +246,13 @@ public class Jeu extends AppCompatActivity {
 
     public int RandomNumber() {
         Random randomNumber = new Random();
-        int random = randomNumber.nextInt(15);
+        int random = randomNumber.nextInt(5);
         return random;
     }
 
     public int RandomLecheur(){
         Random randomNumber = new Random();
-        int random = randomNumber.nextInt(15 + 1 -15) + 15;
+        int random = randomNumber.nextInt(5 + 1 -5) + 5;
         return random;
     }
 
