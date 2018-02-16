@@ -9,17 +9,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:src="@drawable/sons" />
+        android:contentDescription="@string/icon_sons"
+        android:src="@drawable/ic_music_player" />
 
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_weight="1"
-        android:text="Sons" />
+        android:text="@string/sons" />
 
-    <ToggleButton
-        android:id="@+id/toggleButtonSound"
+    <ImageButton
+        android:id="@+id/buttonSound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="sons"/>
+        android:checked="true"
+        android:onClick="sons"
+        android:src="@drawable/ic_volume"
+        android:contentDescription="@string/icon_volume" />
 </LinearLayout>

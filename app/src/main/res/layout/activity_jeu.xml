@@ -10,17 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_weight="33"
+        android:layout_weight="40"
         android:orientation="vertical">
 
         <TextView
-        android:id="@+id/editTexteLocalisation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/localisation"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+            android:id="@+id/textViewLocalisation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/localisation"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageViewMap"
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_weight="66"
+        android:layout_weight="60"
         android:orientation="horizontal">
 
         <TableRow
@@ -45,13 +45,15 @@
 
             <Button
                 android:id="@+id/btn_1_1"
-                android:layout_width="match_parent"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="50" />
 
             <Button
                 android:id="@+id/btn_1_2"
-                android:layout_width="match_parent"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="50" />
         </TableRow>
@@ -64,13 +66,15 @@
 
             <Button
                 android:id="@+id/btn_2_1"
-                android:layout_width="match_parent"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="50" />
 
             <Button
                 android:id="@+id/btn_2_2"
-                android:layout_width="match_parent"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="50" />
         </TableRow>

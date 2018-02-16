@@ -3,20 +3,32 @@ package com.example.bins.rookieagent;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
+
+    private ImageButton buttonSound;
+    MediaPlayer player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+
+
+        player = MediaPlayer.create(Home.this, R.raw.music);
+        player.setVolume(100, 100);
+        player.setLooping(true);
+        player.start();
     }
 
     @Override
@@ -49,18 +61,14 @@ public class Home extends AppCompatActivity {
         // Get the layout inflater
         LayoutInflater inflater = this.getLayoutInflater();
 
+        View layout_view = inflater.inflate(R.layout.alert_dialog_option, null);
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
-        builder.setView(inflater.inflate(R.layout.alert_dialog_option, null))
+        builder.setView(layout_view)
                 .setIcon(R.drawable.option).setTitle(R.string.option)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(Home.this, "Option enregistré", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .setNegativeButton(R.string.cancel, null)
+                .setPositiveButton(R.string.ok, null)
                 .show();
+        buttonSound = layout_view.findViewById(R.id.buttonSound);
     }
 
     public void Quitte(View view) {
@@ -80,10 +88,13 @@ public class Home extends AppCompatActivity {
     }
 
     public void sons(View view) {
-        if (view.isActivated()){
-            Toast.makeText(Home.this, "Sons déactivé", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(Home.this, "Sons activé", Toast.LENGTH_SHORT).show();
+        if (player.isPlaying()) {
+            player.pause();
+            buttonSound.setImageResource(R.drawable.ic_muted);
+        }
+        else {
+            player.start();
+            buttonSound.setImageResource(R.drawable.ic_volume);
         }
     }
 }

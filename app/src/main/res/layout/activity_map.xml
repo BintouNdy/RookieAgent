@@ -13,18 +13,18 @@
         android:gravity="center">
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:onClick="Ville"
-            android:background="@null" />
+            android:onClick="Ville" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:onClick="Police"
-            android:background="@null" />
+            android:onClick="Police" />
     </TableRow>
 
     <TableRow
@@ -34,18 +34,18 @@
         android:gravity="center">
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:onClick="Gare"
-            android:background="@null" />
+            android:onClick="Gare" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:onClick="Hopital"
-            android:background="@null" />
+            android:onClick="Hopital" />
     </TableRow>
 
     <TableRow
@@ -55,17 +55,17 @@
         android:gravity="center">
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:onClick="Plage"
-            android:background="@null" />
+            android:onClick="Plage" />
 
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:onClick="Port"
-            android:background="@null" />
+            android:onClick="Port" />
     </TableRow>
 </TableLayout>
