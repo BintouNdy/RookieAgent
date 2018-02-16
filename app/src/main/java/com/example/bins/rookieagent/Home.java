@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -17,10 +19,28 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_about:
+                new AlertDialog.Builder(this)
+                        .setMessage(R.string.police_desc)
+                        .setIcon(R.drawable.ic_policeman).setTitle(R.string.police_name)
+                        .setPositiveButton(R.string.ok, null)
+                        .show();
+                break;
+        }
+        return true;
+    }
 
     public void Commencer(View view) {
-        Toast.makeText(Home.this, "Commencer", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, Jeu.class);
+        Intent intent = new Intent(this, Map.class);
         startActivity(intent);
     }
 

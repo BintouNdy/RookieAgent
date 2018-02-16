@@ -1,4 +1,5 @@
 <resources>
+    <!-- Homme -->
     <string name="app_name">RookieAgent</string>
     <string name="start">Commencer</string>
     <string name="exit">Quitter</string>
@@ -7,4 +8,20 @@
     <string name="exit_message">Voulez vous vraiment quitter ? Votre partie n\'a pas été sauvegardé</string>
     <string name="ok">ok</string>
     <string name="cancel">Annulé</string>
+
+    <!-- Map -->
+    <string name="map_name">Carte</string>
+    <!-- Jeu -->
+    <string name="jeu_name">Jeu</string>
+    <string name="perso_desc">Personnage</string>
+    <string name="map_part_desc">partie de la map correspondant a l\'endroit choisi</string>
+    <string name="police_name">Rookie</string>
+    <string name="police_desc">Description de votre personage</string>
+    <string name="localisation">Localisation</string>
+    <string name="circulation">Circulation</string>
+    <string name="police_station">Police station</string>
+    <string name="gare">Gare</string>
+    <string name="hopital">hopital</string>
+    <string name="plage">plage</string>
+    <string name="port">port</string>
 </resources>
